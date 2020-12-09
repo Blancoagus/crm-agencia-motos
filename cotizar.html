@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Concesionaria</title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- BOOTSTRAP -->
+
+    <!-- FONT AWESOME -->
+
+    <script src="https://kit.fontawesome.com/712520a43b.js" crossorigin="anonymous"></script>
+
+    <!-- ROBOTO FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="quote-body">
+<!-- HEADER CON LOGO - TITULO - MENU NAVEGACION -->
+<header>
+
+        <div class="logo">
+            <img src="./assets/img/logo-iteration.png" alt="" class="img-responsive mt-4">
+        </div>
+ 
+
+   
+        <div class="title-header">
+            <h1>Gestión de concesionaria</h1>
+        </div>
+  
+
+        <nav class="nav">
+                <ul class="menu">
+                    <a href="index.html" class="menu-link"><li>Inicio</li></a>
+                    <a href="" class="menu-link"><li>Configuración</li></a>
+                    <a href="" class="menu-link"><li>Salir</li></a>
+                </ul>
+        </nav>
+ 
+</header>   
+
+
+  
+
+<!-- FIN HEADER -->
+
+
+    <!-- MAIN -->
+
+    <main class="quote-main">
+            <h3>Cotización</h3>
+        <form action="" class="quote-form">
+       
+            <div class="quote-details">
+                <div class="small-group">
+                    <label for="quote-id">N° Folio</label>
+                    <input type="number" name="quote-id" id="" value="00324" disabled>   
+                </div>
+
+                <div class="small-group">
+                    <label for="quote-number">N° Cotización</label>   
+                    <input type="number" name="quote-number" id="" value="00012" disabled>
+                </div>
+                <div class="small-group">
+                    <label for="quote-date">Fecha de emisión</label>      
+                    <input type="date" name="quote-date" id="" value="30/11/2020" disabled>
+                </div>
+                <div class="small-group">
+                    <label for="quote-expiration">Valido Hasta</label>     
+                    <input type="date" name="quote-date" id="" value="30/12/2020" disabled>
+                </div>
+                <div class="small-group">
+                    <label for="quote-issued">Emitida por</label>    
+                    <input type="text" name="quote-issued" id="" value="Franco Ramos" disabled> 
+                </div>
+         
+                
+                
+                 
+            </div>
+
+            <div class="quote-client">
+                <h3>Datos del Cliente</h3>
+
+                <div class="small-group">
+                    <label for="client-id">Cliente:</label>
+                    <select name="client-id" id="">
+                        <option value="1" selected>Seleccionar cliente</option>
+                        <option value="2">Iteration Servicios y Soluciones SAS de CV</option>
+                        <option value="3">OrangeSport</option>
+                        <option value="4">Javier Ortega</option>
+                    </select>
+                </div>
+
+                <div class="small-group">
+                    <label for="client-direction">Dirección</label>
+                    <input type="text" name="client-direction" id="" value="Calzada de la Viga 103, Iztapalapa, CDMX, 04700" disabled>
+                </div>
+
+                <div class="small-group">
+                    <label for="client-email">Correo Electrónico</label>
+                    <input type="email" name="client-email" id="" value="empresa@dominio.mx">   
+                </div>
+
+                <div class="small-group">                 
+                    <label for="client-phone">Teléfono</label>
+                    <input type="number" name="client-phone" id="" value="55 0000 0000" >
+                </div>
+
+                <div class="small-group">
+                    <label for="client-bussines">Razón Social</label>
+                    <input type="text" name="client-bussines" id="" value="Iteration Servicios y Soluciones SAS de CV" disabled>
+                </div>
+                
+            </div>
+
+            <div class="quote-products">
+                <table class="quote-table">
+                    <thead>
+                        <th>ID Producto</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Descripción</th>
+                        <th>Color</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Total</th>
+                    </thead>
+
+                    <tbody>
+                        <td>5</td>
+                        <td>Yamaha</td>
+                        <td>2020</td>
+                        <td>Motocicleta Deportiva 2020</td>
+                        <td>Roja y Negra</td>
+                        <td>1</td>
+                        <td>$25,000.00</td>
+                        <td>$25,000.00</td>
+                    </tbody>
+
+                </table>
+
+                <div class="quote-mount">
+                    <div class="mount-group">
+                        <p>Subtotal: </p>
+                        <span>$25,000.00</span>
+                    </div>
+                    <div class="mount-group">
+                        <p>Descuento: </p>
+                        <span>0%</span>
+                    </div>
+                    <div class="mount-group">
+                        <p>Neto: </p>
+                        <span>$25,000.00</span>
+                    </div>
+                    <div class="mount-group">
+                        <p>IVA (16%): </p>
+                        <span>$3,499.00</span>
+                    </div>
+                    <div class="mount-group">
+                        <p>TOTAL: </p>
+                        <span>$28,3499.00</span>
+                    </div>
+
+                    <button type="submit" id="btnModal" onclick="modal();"><i class="fa fa-plus"></i>Agregar productos</button>
+                </div>
+
+                <div class="vehicle-modal" id="modal">
+                    <div class="modal-content">
+                        <span class="close">X</span>
+                        <h2>Agregar un producto</h2>
+                        <form action="" method="post" class="vehicle-form add-product-form">
+                                <input class="add-product-search" type="search" name="" id="" placeholder="Buscar producto por Código, Nombre o Descripción">
+                            
+                            <div class="submit">
+                                <input class="add-product mt" type="submit" value="Agregar Producto">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="quote-terms">
+                <h3>Condiciones</h3>
+                <div class="quote-method">
+                    <label>
+                        Anticipo del 50%
+                        <input type="radio" name="quoteMethod" id="" value="50">
+                    </label>
+                    <label>
+                        Anticipo del 100%
+                        <input type="radio" name="quoteMethod" id="" value="100">
+                    </label>
+                </div>
+
+            </div>
+            
+            
+           <div class="quote-submit">
+            <input type="submit" value="Hacer cotización">
+           </div>
+           
+        </form>
+    </main>
+
+
+    <footer class="footer">
+            <p class="text-footer">Todos los derechos reservados &copy; Iteration Servicios y Soluciones SAS de CV.</p>
+    </footer>
+
+
+<script src="./assets/js/modals.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Concesionaria</title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- BOOTSTRAP -->
+
+    <!-- FONT AWESOME -->
+
+    <script src="https://kit.fontawesome.com/712520a43b.js" crossorigin="anonymous"></script>
+
+    <!-- ROBOTO FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="sells-body">
+<!-- HEADER CON LOGO - TITULO - MENU NAVEGACION -->
+<header class="header">
+
+        <div class="logo">
+            <img src="./assets/img/logo-iteration.png" alt="" class="img-responsive mt-4">
+        </div>
+ 
+
+   
+        <div class="title-header">
+            <h1>Gestión de concesionaria</h1>
+        </div>
+  
+
+        <nav class="nav">
+                <ul class="menu">
+                    <a href="index.html" class="menu-link"><li>Inicio</li></a>
+                    <a href="" class="menu-link"><li>Configuración</li></a>
+                    <a href="" class="menu-link"><li>Salir</li></a>
+                </ul>
+        </nav>
+ 
+</header>   
+
+
+  
+
+<!-- FIN HEADER -->
+
+
+    <!-- MAIN -->
+
+    <main class="sells-main">
+
+        <div class="sells-nav-container">
+            <nav class="sells-nav">
+                <ul class="sells-menu">
+                    <li class="sells-item active">Clientes</li>
+                    <li class="sells-item">Inventario</li>
+                    <li class="sells-item">Agentes</li>
+                </ul>
+            </nav>
+        </div>
+
+    </main>
+
+    <div class="client-stats">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <div class="inventory-stats">
+        <canvas id="inventoryStats"></canvas>
+    </div>
+
+    <div class="sells-stats">
+        <canvas id="sellsStats"></canvas>
+    </div>
+    <div class="sells-stats2">
+        <canvas id="sellsStats2"></canvas>
+    </div>
+
+
+    <footer class="footer">
+            <p class="text-footer">Todos los derechos reservados &copy; Iteration Servicios y Soluciones SAS de CV.</p>
+    </footer>
+
+
+<script src="./assets/js/modals.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+<script>
+
+    // DATA CLIENTES
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+    datasets: [{ 
+        data: [86,114,106,106,107,111,133,221,783,278, 800, 900, 150],
+        label: "Iteration Servicios y Soluciones SAS de CV.",
+        borderColor: "#3e95cd",
+        fill: false
+      }, { 
+        data: [282,350,411,502,635,809,947,102,340,230, 800, 900, 150],
+        label: "Francisco Perez García",
+        borderColor: "#8e5ea2",
+        fill: false
+      }, { 
+        data: [168,170,500,190,203,276,408,547,675,734, 800, 900, 150],
+        label: "Eduardo Gaitan",
+        borderColor: "#3cba9f",
+        fill: false
+      }, { 
+        data: [40,20,10,150,24,38,74,167,508,784, 800, 900, 150],
+        label: "Joyeria CDMX",
+        borderColor: "#e8c3b9",
+        fill: false
+      }, { 
+        data: [6,3,2,2,7,26,82,172,312,433, 800, 900, 150],
+        label: "OrangeSport",
+        borderColor: "#c45850",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Estadisticas de Ventas de los Clientes"
+    }
+  }
+});
+
+    // DATA AGENTES
+
+    var sellsCtx = document.getElementById('sellsStats').getContext('2d')
+    var sellsChart = new Chart(sellsCtx, {
+    type: 'doughnut',
+    data: {
+      labels: ["Ramiro Perez", "Alberto Gabriel", "Fernando Sanchez", "Romina Galvan", "Valentina Rodriguez",],
+      datasets: [
+        {
+          label: "# Ventas",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: [500,800,20,59,333]
+        }
+      ]
+    },
+    options: {
+        responsive:true,
+        title: {
+        display: true,
+        text: 'Cantidad de Ventas por Asesor'
+      }
+    }
+});
+  
+var sellsCtx = document.getElementById('sellsStats2').getContext('2d')
+var sellsChart = new Chart(sellsCtx, {
+  type: 'line',
+  data: {
+    labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+    datasets: [{ 
+        data: [6,11,10,10,10,11,13,2,3,27, 8, 9, 15],
+        label: "Ramiro Perez",
+        borderColor: "#3e95cd",
+        fill: false
+      }, { 
+        data: [22,3,41,5,6,9,7,2,4,9, 0, 9, 1],
+        label: "Alberto Gabriel",
+        borderColor: "#8e5ea2",
+        fill: false
+      }, { 
+        data: [16,17,5,19,20,7,8,5,7,7, 8, 9, 15],
+        label: "Fernando Sanchez",
+        borderColor: "#3cba9f",
+        fill: false
+      }, { 
+        data: [0,20,10,15,24,3,7,16,5,4, 8, 9, 15],
+        label: "Romina Galvan", 
+        borderColor: "#e8c3b9",
+        fill: false
+      }, { 
+        data: [6,3,2,2,7,26,2,2,32,4, 80, 9, 8],
+        label:  "Valentina Rodriguez",
+        borderColor: "#c45850",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Estadisticas de Ventas de los Empleados"
+    }
+  }
+});
+
+
+// DATA INVENTARIO
+
+
+var inventoryCtx = document.getElementById('inventoryStats').getContext('2d')
+var inventoryChart = new Chart(inventoryCtx, {
+  type: 'line',
+  data: {
+    labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+    datasets: [{ 
+        data: [86,114,106,106,107,111,133,221,783,278, 800, 900, 150],
+        label: "Vehículos Nuevos",
+        borderColor: "#3e95cd",
+        fill: false
+      }, { 
+        data: [282,350,411,502,635,809,947,102,340,230, 800, 900, 150],
+        label: "Vehículos Usados",
+        borderColor: "#8e5ea2",
+        fill: false
+      }, { 
+        data: [168,170,500,190,203,276,408,547,675,734, 800, 900, 150],
+        label: "Filtros de Aire",
+        borderColor: "#3cba9f",
+        fill: false
+      }, { 
+        data: [40,20,10,150,24,38,74,167,508,784, 800, 900, 150],
+        label: "Frenos",
+        borderColor: "#e8c3b9",
+        fill: false
+      }, { 
+        data: [6,3,2,2,7,26,82,172,312,433, 800, 900, 150],
+        label: "Amortiguadores",
+        borderColor: "#c45850",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Ventas por categoría"
+    }
+  }
+});
+
+
+
+    </script>
+</body>
+</html>

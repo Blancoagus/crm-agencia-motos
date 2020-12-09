@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Concesionaria</title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- BOOTSTRAP -->
+
+    <!-- FONT AWESOME -->
+
+    <script src="https://kit.fontawesome.com/712520a43b.js" crossorigin="anonymous"></script>
+
+    <!-- ROBOTO FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="sells-body">
+<!-- HEADER CON LOGO - TITULO - MENU NAVEGACION -->
+<header class="header">
+
+        <div class="logo">
+            <img src="./assets/img/logo-iteration.png" alt="" class="img-responsive mt-4">
+        </div>
+ 
+
+   
+        <div class="title-header">
+            <h1>Gestión de concesionaria</h1>
+        </div>
+  
+
+        <nav class="nav">
+                <ul class="menu">
+                    <a href="index.html" class="menu-link"><li>Inicio</li></a>
+                    <a href="" class="menu-link"><li>Configuración</li></a>
+                    <a href="" class="menu-link"><li>Salir</li></a>
+                </ul>
+        </nav>
+ 
+</header>   
+
+
+  
+
+<!-- FIN HEADER -->
+
+
+    <!-- MAIN -->
+
+    <main class="sells-main">
+
+        <div class="sells-nav-container">
+            <nav class="sells-nav">
+                <ul class="sells-menu">
+                    <li class="sells-item active">Facturas</li>
+                    <li class="sells-item">Seguimiento de Cotizaciones</li>
+                    <li class="sells-item">Seguimiento de Facturas</li>
+                </ul>
+            </nav>
+        </div>
+
+        
+    </main>
+
+<div class="bills-info-container active2">
+
+    <div class="sells-bill-info">
+        <form action="" class="sells-bill-search">
+            <div class="group">
+                <label for="bill-number">Numero de Factura</label>
+                <input type="text" name="bill-number" id="">
+                <label for="bill-clientid">ID de Cliente</label>
+                <input type="text" name="bill-clientid" id="">
+                <label for="bill-date">Fecha de Factura</label>
+                <input type="date" name="bill-date" id="">
+                <label for="bill-bussiness">Razón Social</label>
+                <input type="text" name="bill-bussiness" id="">
+                <label for="bill-rfc">RFC</label>
+                <input type="number" name="bill-rfc" id="">
+            </div>
+
+            <input type="submit" value="Buscar">
+            <button class="bill-new" id="btnModal">Nueva Factura</button>
+        </form>
+    </div>
+
+    <section class="bill-modal" id="modal">
+        <div class="bill-modal-content">
+            <span class="close">X</span>
+            <h2>Nueva Factura</h2>
+
+            <div class="bill-table-container">
+                <table class="bill-table">
+                        <thead>
+                            <th>ID</th>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Color</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Precio Total</th>
+                        </thead>
+                
+                    <tr>
+                        <tbody>
+                            <td>1</td>
+                            <td>Yamaha</td>
+                            <td>2020</td>
+                            <td>Rojo y Blanco</td>
+                            <td>1</td>
+                            <td>$16,000.0</td>
+                            <td>$16,000.0</td>
+                        </tbody>
+                    </tr>
+                </table>
+
+                <div class="bill-details">
+                    <p class="bill-subtotal">SubTotal:</p>
+                    <span>$16,0000.0</span>
+                    <p class="bill-discount">Descuento:</p>
+                    <span>0%</span>
+                    <p class="bill-neto">Neto:</p>
+                    <span>0%</span>
+                    <p class="bill-iva">IVA (16%):</p>
+                    <span>$2,206.89</span>
+                    <p class="bill-iva">TOTAL: </p>
+                    <span>$18,206.89</span>
+                </div>
+            </div>
+
+            <div class="add-product-container">
+                <label for="">
+                    Productos
+                    <select name="products" id="">
+                        <option value="Yamaha R15">Yamaha R15</option>
+                        <option value="Yamaha 2020">Yamaha 2020</option>
+                        <option value="Ducati 2019">Ducati 2019</option>
+                    </select>
+                </label>
+            </div>
+
+            <button class="add-product" id="btnModal2">Agregar Producto</button>
+        </div>
+    </section>
+
+
+
+
+</div>
+
+<div class="quote-info-container">
+    <h3>Seguimiento de Cotizaciones</h3>
+    <div class="quote-info-options">
+        <label>
+            Todas
+            <input type="radio" name="quoteStatus" id="" value="all" checked>
+        </label>
+        <label>
+            Por vencer
+            <input type="radio" name="quoteStatus" id="" value="expiration">
+        </label>
+        <label>
+            Expiradas
+            <input type="radio" name="quoteStatus" id="" value="expirated">
+        </label>
+        <label>
+            Pendientes
+            <input type="radio" name="quoteStatus" id="" value="pendientes">
+        </label>
+    </div>
+
+    <div class="quote-search">
+        
+        <input type="search" name="quote-search" id="" placeholder="Buscar..." autocomplete="off">
+        <i class="fas fa-search"></i>
+    </div>
+
+    <div class="quote-table-container">
+        <table class="quote-table">
+            <thead>
+                <th>ID</th>
+                <th>N° de Folio</th>
+                <th>N° de Cotización</th>
+                <th>Fecha de emisión</th>
+                <th>Vencimiento</th>
+                <th>Cliente</th>
+                <th>Persona encargada</th>
+                <th>Estatus</th>
+            </thead>
+
+            <tbody>
+                <td>1</td>
+                <td>12</td>
+                <td>0001</td>
+                <td>12/07/2020</td>
+                <td>12/08/2020</td>
+                <td>Iteration</td>
+                <td>Vendedor Hector</td>
+                <td class="payed"><i class="fas fa-circle"></i>Pagada</td>
+            </tbody>
+            
+            <tbody>
+                <td>1</td>
+                <td>12</td>
+                <td>0001</td>
+                <td>12/07/2020</td>
+                <td>12/08/2020</td>
+                <td>Iteration</td>
+                <td>Vendedor Hector</td>
+                <td class="rejected"><i class="fas fa-circle"></i>Rechazada</td>
+            </tbody>
+
+            <tbody>
+                <td>1</td>
+                <td>12</td>
+                <td>0001</td>
+                <td>12/07/2020</td>
+                <td>12/08/2020</td>
+                <td>Iteration Servicios y Soluciones TI</td>
+                <td>Vendedor Hector</td>
+                <td class="waiting"><i class="fas fa-circle"></i>En espera</td>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+<div class="bill-follow">
+    <h3>Seguimiento de Facturas</h3>
+    <div class="quote-info-options">
+        <label>
+            Todas
+            <input type="radio" name="billStatus" id="" value="all" checked>
+        </label>
+        <label>
+            Por vencer
+            <input type="radio" name="billStatus" id="" value="expiration">
+        </label>
+        <label>
+            Pagadas
+            <input type="radio" name="billStatus" id="" value="payed">
+        </label>
+        <label>
+            Pendientes de Pago
+            <input type="radio" name="billStatus" id="" value="waitingPay">
+        </label>
+    </div>
+
+    <div class="quote-search">
+        
+        <input type="search" name="quote-search" id="" placeholder="Buscar..." autocomplete="off">
+        <i class="fas fa-search"></i>
+    </div>
+
+    <div class="quote-table-container">
+        <table class="quote-table">
+            <thead>
+                <th>ID</th>
+                <th>N° de Folio</th>
+                <th>N° de Factura</th>
+                <th>Fecha de emisión</th>
+                <th>Vencimiento</th>
+                <th>Cliente</th>
+                <th>Persona encargada</th>
+                <th>Estatus</th>
+            </thead>
+
+            <tbody>
+                <td>1</td>
+                <td>12</td>
+                <td>0001</td>
+                <td>12/07/2020</td>
+                <td>12/08/2020</td>
+                <td>Iteration</td>
+                <td>Vendedor Hector</td>
+                <td class="payed"><i class="fas fa-circle"></i>Pagada</td>
+            </tbody>
+            
+            <tbody>
+                <td>1</td>
+                <td>12</td>
+                <td>0001</td>
+                <td>12/07/2020</td>
+                <td>12/08/2020</td>
+                <td>Iteration</td>
+                <td>Vendedor Hector</td>
+                <td class="waiting"><i class="fas fa-circle"></i>En espera de respuesta</td>
+            </tbody>
+
+            <tbody>
+                <td>1</td>
+                <td>12</td>
+                <td>0001</td>
+                <td>12/07/2020</td>
+                <td>12/08/2020</td>
+                <td>Iteration Servicios y Soluciones TI</td>
+                <td>Vendedor Hector</td>
+                <td class="warning"><i class="fas fa-circle"></i>Vence pronto</td>
+            </tbody>
+            
+            <tbody>
+                <td>1</td>
+                <td>12</td>
+                <td>0001</td>
+                <td>12/07/2020</td>
+                <td>12/08/2020</td>
+                <td>Iteration Servicios y Soluciones TI</td>
+                <td>Vendedor Hector</td>
+                <td class="payment-need"><i class="fas fa-circle"></i>Falta pago</td>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+
+
+    <footer class="footer">
+            <p class="text-footer">Todos los derechos reservados &copy; Iteration Servicios y Soluciones SAS de CV.</p>
+    </footer>
+
+
+<script src="./assets/js/modals.js"></script>
+</body>
+</html>

@@ -1,0 +1,1574 @@
+/* RESETEO */
+*,*:before,*:after {box-sizing: border-box;}
+html{max-width: 100%; min-height: 100vh;}
+body {margin: 0;font-family: 'Roboto', sans-serif; font-size: 14px; position: relative;}
+img {max-width: 100%;height: auto;}
+a {text-decoration: none; font-weight: 800; transition:text-shadow .5s, font-weight .5s}
+ol, ul, li{list-style: none; margin: 0;}
+header{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(./assets/img/header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+header nav{
+    width: 100%;
+    height: 40px;
+    background-color:rgb(24, 23, 23);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* EN CASO DE QUERER EL TITULO Y EL LOGO UNO EN CADA LADO */
+
+/* header .logo{
+    margin: auto 0;
+    width: 20%;
+}
+
+header .title-header{
+    text-align: center;
+    margin: auto 0;
+    width: 40%;
+}
+
+header nav{
+    width: 100%;
+    height: 40px;
+    background-color:rgb(24, 23, 23);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+   */
+
+
+/* VARIABLES */
+
+:root {
+    --green-btn: #68da68;
+    --green-btn-hover: #70ec70;
+    --green-btn-shadow: 0 0 10px rgba(0, 0, 0, 0.486);
+    --green-btn-color: rgb(83, 83, 83);
+    --green-btn-color-active: black;
+}
+
+/* FIN RESETEO */
+
+.index-body{ 
+    background-image: url(./assets/img/carretera.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* HEADER */
+
+main{
+    margin-top: 150px;
+}
+
+.logo{
+    margin: 30px auto 0;
+}
+
+.title-header h1{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.menu{
+    display: flex;
+    text-align: center;
+}
+
+.menu-item{
+    display: block;
+    text-align: center;
+}
+
+.menu-link{
+    color: white;
+    margin-right: 15px;
+    transform: scale(1);
+    transition: transform .5s;
+}
+
+.menu-link:hover{
+    transform: scale(1.06);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.logo{
+    width: 50%;
+}
+
+/* MAIN */
+
+.cards-container{
+    margin: 20px auto;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cards-container .card{
+    background-color: rgba(24, 23, 23, 0.795);
+    box-shadow: 1px 1px 15px 0px black;
+    margin: 10px 2px;
+    width: 45%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.card i{
+    margin-right: 5px;
+}
+
+.card a{
+    color:rgba(156, 156, 156, 0.911);
+}
+
+.card:last-child{
+    margin-bottom: 25px;
+}
+
+.card-title{    font-size: 16px;
+}
+
+.card-text{
+    font-size: 16px;
+}
+
+/* FOOTER */
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    color: white;
+    background-color: rgb(34, 32, 32);
+    padding: 10px;
+    margin-top: 70px;
+}
+
+
+
+/* MEDIA QUERIES 700PX */
+
+@media screen and (min-width: 700px) {
+    
+    .logo {
+        width: 30%;
+    }
+
+    .title-header{
+        width: 100%;
+    }
+
+    .title-header h1{
+        font-size: 22px;
+    }
+
+    /* CARDS */
+    
+    .cards-container{
+        margin: 20px auto;
+        padding: 0 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .cards-container .card{
+        background-color: rgba(24, 23, 23, 0.822);
+        box-shadow: 1px 1px 15px 0px black;
+        margin: 10px 2px;
+        width: 25%;
+        color: rgba(156, 156, 156, 0.911);
+        text-align: center;
+        padding: 10px;
+        transform: scale(1);
+        transition: transform .5s,
+                    background-color .5s,
+                    color .3s;
+    }
+
+    .card:hover,
+    .card:hover > a{
+        background-color: rgba(24, 23, 23, 0.911);
+        cursor: pointer;
+        transform: scale(1.1);
+        color: white;
+    }
+    
+    .card i{
+        margin-right: 5px;
+    }
+    
+    .card:last-child{
+        margin-bottom: 25px;
+    }
+    
+    .card-title{    
+        font-size: 18px;
+    }
+    
+    .card-text{
+        font-size: 18px;
+    }
+}
+
+
+/* VEHICULOS */
+
+.vehicle-body{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+
+/* MODULO VEHICULOS PRINCIPAL */
+
+.vehicle-main{
+    background-color: rgba(255, 255, 255, 0.938);
+    padding: 10px;
+    min-height:100vh;
+}
+
+.vehicle-table{
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+    vertical-align: top;
+}
+
+.vehicle-table th {
+    background-color: rgb(7, 7, 7);
+    padding: 10px;
+    color: white;
+    border: 1px solid black;
+}
+
+.vehicle-table td{
+    padding: 10px 0;
+    border: 1px solid black;
+}
+
+.vehicle-table tr{
+    background-color: white;
+    transition: background-color .5s;
+}
+
+.modify{
+    color: rgb(255, 174, 0);
+    width: 100%;
+}
+
+.delete{
+    width: 100%;
+    color: rgb(255, 0, 0);
+}
+
+/* AGREGAR VEHICULO */
+
+.vehicle-add{
+    padding: 8px;
+    font-size: 16px;
+    width: 15%;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #5cb85c;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.534);
+    border: none;
+    font-weight: 600;
+    color: rgb(51, 49, 49);
+    transform: scale(1);
+    transition: transform .5s,
+                background-color .3s;
+}
+
+.vehicle-add i{
+    margin-right: 5px;
+}
+
+.vehicle-add:hover{
+    cursor: pointer;
+    background-color: #68da68;
+    transform: scale(1.01);
+}
+
+
+.vehicle-table tr:hover{
+    cursor: pointer;
+    background-color: rgb(219, 234, 253);
+}
+
+.vehicle-options{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.vehicle-search{
+    position: relative;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 35px;
+    color: rgb(78, 78, 78);
+    border-radius: 3px;
+    padding: 2px;
+    border: 1px solid rgba(3, 3, 3, 0.568);
+    transition: padding .5s;
+    float: right;
+}
+
+.search-options{
+    position: relative;
+    width: 30%;
+    transform: scale(1);
+    transition: transform .5s;
+    margin-right: 10px;
+}
+
+.search-options input[type=search]{
+    transform: scale(1);
+    transition: transform .5s,
+                border .3s;
+    outline: none;
+    border: 1px solid black;
+}
+
+.search-options input[type=search]:focus{
+    transform: scale(1.05);
+    outline: none;
+    border: 1px solid #68da68;
+}
+
+.vehicle-options .search-options label i{
+    position: absolute;
+    top:0;
+    right: 0;
+    padding: 10px;
+    transform: scale(1);
+}
+
+.vehicle-options .search-options label i:hover{
+    position: absolute;
+    top:0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.vehicle-options .search-options label a{
+    color: grey;
+}
+
+.vehicle-search:focus{
+    padding: 10px;
+    border: 1px solid black;
+    color: black;
+}
+
+/* MODAL NUEVO VEHICULO*/
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+
+.modal-content{
+    background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid lightgray;
+	border-top: 10px solid #68da68;
+    width: 75%;
+}
+
+.close,
+.close2{
+    color: #504e4e;
+	float: right;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus,
+.close2:hover,
+.close2:focus{
+    color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.vehicle-form{
+    width: 100%;
+    overflow: hidden;
+}
+
+.vehicle-use{
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+}
+
+.vehicle-form .group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.group label{
+    padding: 5px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    width: 40%;
+}
+
+.group input[type=text],
+.group input[type=number],
+.group select,
+.group input[type=email]{
+    margin-bottom: 15px;
+    width: 40%;
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.534);
+    border: .2px solid rgba(0, 0, 0, 0.377);
+    transition: transform .5s,
+                border .5s,
+                box-shadow .5s;
+}
+
+
+.group input[type=text]:focus,
+.group input[type=number]:focus,
+.group input[type=email]:focus{
+    transform: scale(1.05);
+    outline: none;
+    border: .2px solid #68da68;
+    box-shadow: 0 0 5px #3783379a;
+}
+
+
+
+.group{
+    display: block;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.vehicle-discountP{
+    width: 40%;
+    padding: 5px;
+    color: rgba(0, 0, 0, 0.459);
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #5bc0dec7;
+    transform: scale(1);
+    transition: transform .5s,
+                background-color .5s,
+                color .3s;
+}
+
+.vehicle-discountP:hover{
+    cursor: pointer;
+    background-color: #5bc0de;
+    color: black;
+    transform: scale(1.01);
+}
+
+.group-title{
+    text-align: center;
+    width: 100%;
+}
+
+.photo{
+    display: block;
+    border: 1px solid black;
+    width:150px;
+    height: 150px;
+    margin:auto;
+    border-radius: 5px;
+}
+
+.input-photo{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.vehicle-photo-input{
+    margin: auto;
+}
+
+
+.submit{
+    width: 100%;
+    text-align: center;
+
+}
+
+.vehicle-form input[type=submit]{
+    width: 30%;
+    margin: 20px auto;
+    background-color: #68da68;
+    border: none;
+    padding: 10px 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.486);
+    font-weight: 600;
+    transform: scale(1);
+    transition: transform .5s,
+                box-shadow .5s,
+                font-weight .3s;
+}
+
+.vehicle-form input[type=submit]:hover{
+    cursor: pointer;
+    background-color: #68da68;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.822);
+    font-weight: 800;
+    transform: scale(1.01);
+}
+
+.group .discount span {
+    display: block;
+    color: rgb(10, 175, 10);
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px 0;
+}
+
+.discount span strong{
+    text-decoration: underline;
+}
+
+.discount span strong{
+    text-decoration: underline;
+}
+
+
+@media screen and (min-width: 700px){
+
+    .vehicle-main{
+        margin-top: 30px;
+    }
+}
+
+
+/* VENTAS */
+
+@media screen and (min-width: 700px){
+
+    .sells-main{
+        align-items: center;
+        width: 98%;
+        margin: 15px auto;
+    }
+
+    .sells-nav-container,
+    .parts-nav-container{
+        margin-bottom: 0;
+        grid-row: 1;
+        height: 120px;
+        
+    }
+
+    .sells-nav,
+    .parts-nav{
+        width: 100%;
+    }
+
+    .sells-menu,
+    .parts-menu{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+    }
+
+    .dinamic-item{
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        border: 1px solid black;
+        font-size: 16px;
+        background-color: rgba(48, 46, 46, 0.705);
+        color: rgba(255, 255, 255, 0.829);
+        transition: font-weight .3s,
+                    color .3s,
+                    font-size .3s,
+                    background-color .5s;
+
+    }
+
+    .sells-item:hover,
+    .parts-item:hover,
+    .dinamic-item:hover{
+        background-color: black;
+        color: white;
+        font-weight: 600;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .active{
+        background-color: rgba(0, 0, 0, 0.925);
+        color: white;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    /* FACTURA */
+
+    .bills-info.container{
+        display: none;
+    }
+
+    .sells-bill-info{
+        grid-row: 2;
+        width: 98%;
+        margin: 0 auto;
+    }
+
+    .sells-bill-search .group{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sells-bill-search .group input{
+        width: 49%;
+        margin: 0;
+        display: block;
+        height: 30px;
+    }
+    
+    .sells-bill-search .group label{
+        width: 49%;
+        height: auto;
+    }
+
+    .sells-bill-search input[type=submit]{
+        text-align:center;
+        float:right;
+        margin: auto;
+        width: 10%;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        background-color: rgb(37, 36, 36);
+        color: rgb(211, 207, 207);
+        font-size: 17px;
+        transition: font-size .3s,
+                    background-color .5s,
+                    color .3s;
+    }
+    
+    .sells-bill-search input[type=submit]:hover{
+        font-size: 18px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
+    .sells-bill-search input[type=date]{
+    margin-bottom: 15px;
+    width: 49%;
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.534);
+    border: .2px solid rgba(0, 0, 0, 0.377);
+    transition: transform .5s,
+                border .5s,
+                box-shadow .5s;
+    }
+
+    .sells-bill-search input[type=date]:hover{
+        transform: scale(1.05);
+        outline: none;
+        border: .2px solid #68da68;
+        box-shadow: 0 0 5px #3783379a;
+    }
+    
+    .bill-new{
+        text-align:center;
+        float:right;
+        margin: auto;
+        width: 15%;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        background-color: var(--green-btn);
+        color: var(--green-btn-color);
+        font-size: 17px;
+        transition: font-size .3s,
+                    background-color .5s,
+                    color .3s;
+    }
+
+    .bill-new:hover{
+        cursor: pointer;
+        font-size: 18px;
+        color: var(--green-btn-color-active);
+        background-color: var(--green-btn-hover);
+    }
+
+    /* BILL MODAL CONTENT */
+
+    .sells-body{
+        position: relative;
+    }
+
+
+    
+    .bill-modal-content{
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid lightgray;
+        border-top: 10px solid #68da68;
+        width: 85%;
+    }
+    
+    .close{
+        color: #504e4e;
+        float: right;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus{
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+    .bill-table{
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+    }
+
+
+    .bill-table thead{
+        background-color: black;
+        color: white;
+        border: 1px solid black;
+    }
+
+    .bill-table thead th{
+        padding: 10px;
+    }
+
+    .bill-table tbody td{
+        padding: 10px;
+        border: 1px solid black;
+    }
+
+    .bill-details{
+        margin-top: 18px;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        display: grid;
+        grid-template-columns: 80% 15%;
+        grid-gap: 15px;
+    }
+
+    .bill-details p{
+        grid-column: 1;
+        text-align: right;
+    }
+
+    .bill-details span{
+        padding: 10px 0;
+        font-weight: 600;
+        grid-column: 2;
+        width: 100%;
+        text-align: right;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+    }
+
+    .add-product{
+        width: 20%;
+        padding: 15px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: var(--green-btn-shadow);
+        background-color: var(--green-btn);
+        color: var(--green-btn-color);
+        font-size: 16px;
+        transition: color .3s,
+                    font-size .3s,
+                    background-color .5s;
+    }
+
+    .add-product:hover{
+        cursor: pointer;
+        color:var(--green-btn-color-active);
+        font-size: 18px;
+        background-color: var(--green-btn-hover);
+    }
+
+
+    .active2{
+        display: block;
+
+    }
+
+    .no-active{
+       display: hidden;
+    }
+
+    .add-product-container{
+        width:100%;
+        display: flex;
+        margin-bottom: 5px;
+    }
+
+    .add-product-container label{
+        flex-wrap: wrap;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .add-product-container label select{
+        width: 100%;
+        font-size: 14px;
+        height: 30px;
+    }
+
+    /* SEGUIMIENTO DE COTIZACIONES */
+
+    .quote-info-container{
+        width: 98%;
+        margin: auto;
+        display: none;
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .quote-info-container h3{
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .quote-info-options{
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .quote-info-options label{
+        margin-right: 30px;
+        padding: 10px;
+    }
+
+    
+
+    .quote-search{
+        margin:auto;
+        margin-top: 10px;
+        width: 40%;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .quote-search i{
+        font-size: 20px;
+        margin-left: 15px;
+        color:grey;
+        transition: font-size .3s,
+                    color .2s;
+    }
+    
+    .quote-search i:hover{
+        cursor: pointer;
+        font-size: 21px;
+        color: black;
+    }
+
+    .quote-search input[type=search]{
+        position: relative;
+        width: 100%;
+        height: 30px;
+        padding: 0 20px;
+        border: 1px solid black;
+        border-radius: 5px;
+        transform: scale(1);
+        transition: transform .5s,
+                    border .5s,
+                    font-size .3s;
+    }
+    
+    .quote-search input[type=search]:focus{
+        transform: scale(1.01);
+        font-size: 14px;
+        border: 1px solid var(--green-btn);
+        outline: none;
+    }
+
+    /* TABLA COTIZACIONES */
+
+    .quote-table-container{
+        width: 98%;
+        margin: 25px auto;
+    }
+
+    .quote-table{
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+    }
+
+    .quote-table thead{
+        background-color: black;
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .quote-table thead th{
+        padding: 10px;
+    }
+
+    .quote-table tbody td{
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    .quote-table tbody td i{
+        margin-right: 5px;
+    }
+
+    .payed{
+        color: green;
+    }
+
+    .rejected{
+        color: red;
+    }
+
+    .waiting{
+        color: orange;
+    }
+
+    .quote-table tbody:hover{
+        cursor: pointer;
+        background-color: rgb(199, 240, 247);
+    }
+
+    .warning{
+        color: rgb(100, 6, 6);
+    }
+
+    .payment-need{
+        color: red;
+    }
+
+    /* SEGUIMIENTO DE FACTURAS */
+
+    .bill-follow{
+        display: none;
+        text-align: center;
+    }
+
+    .bill-follow h3{
+        font-size: 20px;
+    }
+
+    /* AGENTES */
+
+    .agent-body td:first-child{
+        width: 5%;
+    }
+
+    .agent-body td{
+        padding: 10px;
+    }
+
+    .agent-body td img{
+        width: 100%;
+    }
+
+
+    /* REFACCIONES */
+
+    .parts-job-container,
+    .parts-sells-containter,
+    .parts-stock-containter{
+        display: none;
+    }
+
+    .add-provider{
+        margin-left: 10px;
+        font-size: 20px;
+        padding: 5px;
+        color: var(--green-btn);
+        transition: font-size .3s,
+                    color .3s;
+    }
+    
+    .add-provider:hover{
+        font-size: 21px;
+        cursor: pointer;
+        color: var(--green-btn-hover);
+    }
+
+    .group-provider{
+        width: 100%;
+        margin: 20px;
+        display: none;
+        flex-wrap: wrap;
+        padding: 20px;
+        box-shadow: 0 0 30px black;
+        position: relative;
+    }
+
+    .group-provider h4{
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .group-provider .submit-btn{
+        width: 100%;
+        text-align: center;
+    }
+
+    .group-provider .submit-btn input[type=submit]{
+        width: 20%;
+        font-size: 16px;
+        padding: 10px;
+        background-color: lightcyan;
+    }
+
+    .close-provider {
+        position: absolute;
+        font-size: 25px;
+        width: 5%;
+        padding: 10px;
+        right: 30px;
+        top: 20px;
+        color: grey;
+        transition: font-size .3s,
+                    color .3s;
+    }
+    
+    .close-provider:hover {
+        font-size: 30px;
+        color: black;
+        cursor: pointer;
+    }
+
+    .part-btn{
+        width: 100%;
+        text-align: center;
+    }
+
+    .part-btn button[type="submit"]{
+        width: 20%;
+        font-size: 14px;
+        padding: 10px;
+        background-color: var(--green-btn);
+        color: var(--green-btn-color);
+        box-shadow: var(--green-btn-shadow);
+        transition: background-color .5s,
+                    color .3s,
+                    font-size .3s;
+
+    }
+    
+    .part-btn button[type="submit"]:hover{
+        cursor: pointer;
+        background-color: var(--green-btn-hover);
+        color: var(--green-btn-color-active);
+        font-size:16px;
+
+    }
+
+    .parts-sells-containter h3{
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .parts-stock-containter h3{
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .out-of-stock{
+        font-weight: 600;
+        color: red;
+    }
+
+    .in-stock{
+        font-weight: 600;
+        color: green;
+    }
+    
+    /* COTIZACIÓN */
+    main.quote-main {
+        margin-top: 5px;
+    }
+
+    .quote-main{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .quote-details,
+    .quote-client {
+        display: flex;
+        flex-wrap: wrap;
+        width: 96%;
+        margin: auto;
+        padding: 30px;
+        border: 1px solid black;
+    }
+
+    .small-group{
+        margin: 5px 0;
+        width: 50%;
+    }
+
+    .quote-main h3{
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .small-group label{
+        margin-left: 15px;
+        font-size: 16px;
+    }
+
+    .small-group input,
+    .small-group select{
+        float: right;
+        margin-left: 10px;
+        width: 40%;
+        font-size: 16px;
+        height: 28px;
+        padding: 0 10px;
+        border-radius: 5px;
+        background-color: rgb(255, 255, 255);
+        border: none;
+        border: 1px solid rgba(0, 0, 0, 0.623);
+    }
+
+    .small-group input:disabled{
+        background-color: ghostwhite;
+        cursor: not-allowed;
+    }
+
+    .quote-client h3{
+        width: 100%;
+
+    }
+
+    .quote-products .quote-table{
+        width: 96%;
+        margin: 20px auto;
+    }
+
+    .quote-mount{
+        width: 96%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .mount-group{
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+
+    .mount-group p {
+        width: 100%;
+        text-align: right;
+    }
+
+    .mount-group span{
+        font-weight: 600;
+        text-align: right;
+        width: 10%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.63);
+        padding: 5px;
+    }
+
+    .quote-mount button[type="submit"]{
+        margin: auto;
+        text-align: center;
+        width: 15%;
+        padding: 12px;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.363);
+        color: var(--green-btn-color);
+        background-color: lightblue;
+        font-size: 14px;
+        box-shadow: var(--green-btn-shadow);
+        transition: width .5s,
+                    color .3s,
+                    font-size .3s,
+                    background-color .3s;
+    }
+
+    .quote-mount button[type="submit"]:hover{
+        cursor: pointer;
+        width: 16%;
+        color: var(--green-btn-color-active);
+        background-color: lightskyblue;
+        font-size: 15px;
+    }
+
+    .quote-mount button i{
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    .quote-terms{
+        width: 96%;
+        padding: 10px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .quote-terms h3{
+        width: 100%;
+        text-align: center;
+    }
+
+    .quote-terms .quote-method{
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .quote-submit{
+        width: 96%;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .quote-submit input[type=submit]{
+        width: 15%;
+        padding: 10px;
+        text-align: center;
+        border: 1px solid rgba(0, 0, 0, 0.493);
+        color: var(--green-btn-color);
+        background-color: var(--green-btn);
+        box-shadow: var(--green-btn-shadow);
+        border-radius: 5px;
+        font-size: 14px;
+        transition: width .5s,
+                    color .3s,
+                    font-size .3s,
+                    background-color .5s;
+    }
+    
+    .quote-submit input[type=submit]:hover{
+        width: 16%;
+        color: var(--green-btn-color-active);
+        background-color: var(--green-btn-hover);
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    .add-product-search{
+        width: 100%;
+        height: 20px;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.384);
+        transition: font-size .3s,
+                    border-color .3s,
+                    padding .3s;
+    }
+
+    .add-product-search:focus{
+        outline: none;
+        border-color: var(--green-btn-hover);
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .add-product.mt{
+        margin-top: 15px;
+    }
+
+    .add-new-provider{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .add-new-provider h4{
+        width: 100%;
+    }
+
+    .add-new-provider label{
+        width: 40%;
+    }
+
+    .add-new-provider input{
+        width: 40%;
+    }
+
+    .provider-btn{
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;    
+    }
+
+    .provider-btn button{
+        padding: 5px;
+        font-size: 14px;
+        width: 15%;
+        box-shadow: var(--green-btn-shadow);
+        color: var(--green-btn-color);
+        background-color: var(--green-btn);
+        transition: color .3s,
+                    width .3s,
+                    background-color .5s,
+                    font-size .3s;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.219);
+   
+    }
+    
+    .provider-btn button:hover{
+        font-size: 15px;
+        width: 16%;
+        color: var(--green-btn-color-active);
+        background-color: var(--green-btn-hover);
+        cursor: pointer;
+    }
+
+    /* PROVIDER .HTML */
+
+    .provider-main{
+        margin: 0;
+        position: relative;
+    }
+
+    .provider-table-container{
+        width: 98%;
+        margin: auto;
+    }
+
+    .provider-table{
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+    }
+
+    .provider-table th{
+        background-color: black;
+        color: white;
+        font-weight: 600;
+        padding: 10px;
+        border:1px solid black;
+    }
+
+    .provider-table tbody{
+        transition: transform .3s,
+                    background-color .5s,
+                    box-shadow .5s;
+    }
+
+    .provider-table tbody td{
+        border: 1px solid rgba(0, 0, 0, 0.568);
+        padding: 10px;
+        transform: scale(1);
+    }
+
+    .provider-table tbody:hover{
+        transform: scale(1.002);
+        background-color: lightblue;
+        cursor: pointer;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.486);
+    }
+
+    .provider-main .search-container{
+        position: relative;
+        width: 40%;
+        margin: 10px;
+        display: flex;
+    }
+
+    .provider-main .search-container i{
+        font-size: 22px;
+        margin: auto 10px;
+        color: lightgrey;
+        transition: color .3s,
+                    font-size .3s;
+    }
+    
+    .provider-main .search-container i:hover{
+        font-size: 24px;
+        margin: auto 10px;
+        color: black;
+        cursor: pointer;
+    }
+
+
+
+
+    .provider-main .search-container input{
+        position: relative;
+        padding: 15px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        width: 100%;
+        height: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.336);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.493);
+    }
+    
+    .provider-main .search-container input:focus{
+        outline: none;
+        border: 1px solid var(--green-btn);
+    }
+
+    /* ESTADISTICAS */
+
+    .client-stats{
+        display: block;
+        margin: auto;
+        width: 85%;
+    }
+
+    .sells-stats{
+        display: none;
+        margin: auto;
+        width: 85%;
+    }
+
+    .sells-stats2{
+        display: none;
+        margin: auto;
+        width: 85%;
+    }
+
+    .inventory-stats{
+        display: none;
+        width: 85%;
+        margin: auto;
+    }
+
+    /* CRM */
+
+    .company-container{
+        margin: 10px auto;
+        display: flex;
+        position: relative;
+        width: 98%;
+    }
+
+    .company-table{
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+        border: 1px solid transparent;
+        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.474);
+    }
+
+    .img-td{
+        width: 10%;
+    }
+
+    .company-tableh{    
+        border-bottom: 1px solid black;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .company-tableh th{
+        padding: 10px;
+    }
+
+    .company-tableb tr:hover{
+        transition: background-color .5s,
+                    font-weight .3s;
+        cursor: pointer;
+        background-color: lightskyblue;
+        font-weight: 600;
+    }
+
+    .company-tableb td{
+        padding: 20px;
+    }
+
+    .employer-response{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .container-dinamic-2,
+    .container-dinamic-3,
+    .container-dinamic-4,
+    .container-dinamic-5{
+        display: none;
+    }
+   
+}
+
+
+
+

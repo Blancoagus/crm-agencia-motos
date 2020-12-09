@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Concesionaria</title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- BOOTSTRAP -->
+
+    <!-- FONT AWESOME -->
+
+    <script src="https://kit.fontawesome.com/712520a43b.js" crossorigin="anonymous"></script>
+
+    <!-- ROBOTO FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="agent-body">
+<!-- HEADER CON LOGO - TITULO - MENU NAVEGACION -->
+<header class="header">
+
+        <div class="logo">
+            <img src="./assets/img/logo-iteration.png" alt="" class="img-responsive mt-4">
+        </div>
+ 
+
+   
+        <div class="title-header">
+            <h1>Gestión de concesionaria</h1>
+        </div>
+  
+
+        <nav class="nav">
+                <ul class="menu">
+                    <a href="index.html" class="menu-link"><li>Inicio</li></a>
+                    <a href="" class="menu-link"><li>Configuración</li></a>
+                    <a href="" class="menu-link"><li>Salir</li></a>
+                </ul>
+        </nav>
+ 
+</header>   
+
+
+  
+
+<!-- FIN HEADER -->
+
+
+    <!-- MAIN -->
+
+    <main class="vehicle-main">
+        <div class="vehicle-options">
+            <button class="vehicle-add" id="btnModal" onclick="modal();"><i class="fas fa-plus"></i>Agregar Agente</button>
+            <div class="search-options">
+                <input class="vehicle-search" type="search" name="search" id="" placeholder="Buscar" autocomplete="off">
+                <label for="search"><a href=""><i class="fas fa-search"></i></a></label>
+            </div>
+        </div>
+        <table class="vehicle-table">
+            <thead class="agent-head">
+                <th>Foto</th>
+                <th>Nombre y Apellido</th>
+                <th>Correo Electrónico</th>
+                <th>Teléfono de Trabajo</th>
+                <th>Puesto</th>
+                <th>Area</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
+            </thead>
+            <tr>
+            <tbody class="agent-body">
+                <td><img src="./assets/img/no-pic.png" alt=""></td>
+                <td>Franco Ruben Ramos Mejia </td>
+                <td>framos@dominio.mx</td>
+                <td>55 0000 0000</td>
+                <td>Asesor de Ventas</td>
+                <td>Comercial</td>
+                <td><a href="#"><i class="modify fas fa-pencil-alt"></i></a></td>
+                <td><a href="#"><i class="delete fas fa-trash-alt"></i></a></td>
+            </tbody>
+            </tr>
+            <tr>
+            <tbody class="agent-body">
+                <td><img src="./assets/img/no-pic.png" alt=""></td>
+                <td>Fernanda Pilar Perez aguilar </td>
+                <td>fpilar@dominio.mx</td>
+                <td>55 0000 0000</td>
+                <td>Directora</td>
+                <td>Administración</td>
+                <td><a href="#"><i class="modify fas fa-pencil-alt"></i></a></td>
+                <td><a href="#"><i class="delete fas fa-trash-alt"></i></a></td>
+            </tbody>
+            </tr>
+
+        </table>
+
+        <!-- MODAL DE NUEVO VEHÍCULO -->
+        <div class="vehicle-modal" id="modal">
+            <div class="modal-content">
+                <span class="close">X</span>
+                <h2>Agregar un empleado</h2>
+                <form action="" method="post" class="vehicle-form agent_form">
+                    <div class="group">
+                        <label for="agent_id">ID</label>
+                        <input type="text" name="agent_id" id="" autocomplete="off" required placeholder="">
+                        <label for="agent_rfc">RFC</label>
+                        <input type="number" name="agent_rfc" id="" autocomplete="off" required placeholder="BLLA970730">
+                        <label for="agent_completeName">Nombre y Apellido</label>
+                        <input type="text" name="agent_completeName" id="" autocomplete="off" required placeholder="Alejandro Perez Gaitan...">
+                        <label for="agent_position">Puesto</label>
+                        <input type="text" name="agent_position" id="" autocomplete="off" required placeholder="Asesor, Atención a clientes, Director...">            
+                        <label>Turno</label>
+                        <select name="agent_turn" id="">
+                                <option value="full_time">Tiempo completo</option>
+                                <option value="morning">Matutino</option>
+                                <option value="evening">Vespertino</option>
+                        </select>                  
+                        <label for="agent_email">Correo</label>
+                        <input type="email" name="agent_email" id="" autocomplete="off" required placeholder="pfernando@dominio.mx">
+                        <label for="agent_supervisor">Supervisor</label>
+                        <input type="text" name="agent_supervisor" id="" autocomplete="off" required placeholder="Romina Flores...">
+                        <label for="agent_phone">Teléfono</label>
+                        <input type="number" name="agent_phone" id="" autocomplete="off" placeholder="55 0000 0000">
+                        <label for="agent_phone2">Teléfono (opcional)</label>
+                        <input type="number" name="agent_phone2" id="" autocomplete="off" placeholder="55 0000 0000">
+                        <label for="agent_area">Area</label>
+                        <input type="text" name="agent_area" id="" autocomplete="off" placeholder="Recursos Humanos, Ventas...">
+                        <label for="agent_status">Estado</label>
+                        <select name="agent_status" id="">
+                            <option value="active" selected>Activo</option>
+                            <option value="inability">Incapacidad</option>
+                            <option value="holidays">Holidays</option>
+                            <option value="active">No activo</option>
+                        </select>
+                    </div>
+
+                    <div class="group">
+                        <h3 class="group-title">Foto</h3>
+                        <div class="photo">
+                            <img src="./assets/img/no-pic.png" alt="Sin foto">
+                        </div>
+                        <div class="input-photo">
+                            <input class="vehicle-photo-input" type="file" name="vehicle_photo" id="">
+                        </div>
+                    </div>
+                    
+                    <div class="submit">
+
+                        <input type="submit" value="Agregar Vehículo">
+                    </div>
+                </form>
+            </div>
+        </div>
+       
+    </main>
+
+    <footer class="footer">
+            <p class="text-footer">Todos los derechos reservados &copy; Iteration Servicios y Soluciones SAS de CV.</p>
+    </footer>
+
+
+<script src="./assets/js/modals.js"></script>
+</body>
+</html>

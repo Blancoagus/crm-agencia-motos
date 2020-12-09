@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Concesionaria</title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- BOOTSTRAP -->
+
+    <!-- FONT AWESOME -->
+
+    <script src="https://kit.fontawesome.com/712520a43b.js" crossorigin="anonymous"></script>
+
+    <!-- ROBOTO FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="sells-body">
+    <!-- HEADER CON LOGO - TITULO - MENU NAVEGACION -->
+    <header class="header">
+
+        <div class="logo">
+            <img src="./assets/img/logo-iteration.png" alt="" class="img-responsive mt-4">
+        </div>
+
+
+
+        <div class="title-header">
+            <h1>Gestión de concesionaria</h1>
+        </div>
+
+
+        <nav class="nav">
+            <ul class="menu">
+                <a href="index.html" class="menu-link">
+                    <li>Inicio</li>
+                </a>
+                <a href="" class="menu-link">
+                    <li>Configuración</li>
+                </a>
+                <a href="" class="menu-link">
+                    <li>Salir</li>
+                </a>
+            </ul>
+        </nav>
+
+    </header>
+
+
+
+
+    <!-- FIN HEADER -->
+
+
+    <!-- MAIN -->
+
+    <main class="sells-main">
+
+        <div class="parts-nav-container">
+            <nav class="parts-nav" id="nav">
+                <ul class="parts-menu" id="dinamicMenu">
+                    <li id="containerDinamic1" class="dinamic-item active">Compañias</li>
+                    <li id="containerDinamic2" class="dinamic-item">Clientes</li>
+                    <li id="containerDinamic3" class="dinamic-item">Contactos</li>
+
+                </ul>
+            </nav>
+        </div>
+
+
+    </main>
+
+    <div class="container-dinamic-1">
+        <div class="quote-search">
+
+            <input type="search" name="quote-search" id="" placeholder="Buscar compañia..."
+            autocomplete="off">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="company-container">
+            <table class="company-table">
+                <thead class="company-tableh">
+                    <th>Logotipo</th>
+                    <th>Compañia</th>
+                    <th>Actividad</th>
+                    <th>Responsable</th>
+                    <th>Descripción</th>
+                </thead>
+
+                <tbody class="company-tableb">
+                    <td class="img-td"><img src="./assets/img/logo-iteration.png" alt=""></td>
+                    <td>Iteration Servicios y Soluciones</td>
+                    <td>Servicios Tecnológicos</td>
+                    <td>Fernando Gaitan</td>
+                    <td>Contratada para Servicios TI</td>
+                </tbody>
+            </table>
+            
+        </div>
+        <button class="bill-new" id="btnModal">Agregar Compañia</button>
+
+        
+    </div>
+
+    <section class="modal" id="modalContainer1">
+        <div class="modal-content">
+            <span class="close">X</span>
+            <h2>Nueva Compañia</h2>
+
+            <form action="" class="vehicle-form part-form">
+                <div class="group">
+                    <div class="add-new-provider">
+                        <h4>AGREGAR NUEVA COMPAÑIA</h4>
+
+                        <label for="provider_id">ID</label>
+                        <input type="number" name="provider_id" id="" autocomplete="off">
+
+                        <label for="provider_name">Nombre</label>
+                        <input type="number" name="provider_name" id="" autocomplete="off" placeholder="">
+
+                        <label for="provider_name">Razon Social</label>
+                        <input type="number" name="provider_name" id="" autocomplete="off" placeholder="">
+
+                        <label for="provider_legalType">Tipo de persona:</label>
+                        <select name="provider_legalType" id="">
+                            <option value="personaFisica">Persona Fisica</option>
+                            <option value="personaMoral">Persona Moral</option>
+                            <option value="SA">Sociedad Anonima</option>
+                            <option value="SC">Sociedad Cooperativa</option>
+                            <option value="SAS">Sociedad por Acciones Simplificada</option>
+                            <option value="SNC">Sociedad en Nombre Colectivo</option>
+                            <option value="SCS">Sociedad en Comandita Simple</option>
+                            <option value="SRL">Sociedad de Responsabilidad Limitada</option>
+                            <option value="SCA">Sociedad en Comandita por Acciones</option>
+                        </select>
+
+                        <h4>Contacto</h4>
+
+                        <label for="provider_contact">Contacto</label>
+                        <select name="provider_contact" id="">
+                            <option value="contat">Contacto1</option>
+                            <option value="contat">Contacto1</option>
+                            <option value="contat">Contacto1</option>
+                            <option value="contat">Contacto1</option>
+                        </select>
+                        <label for="provider_phone">Teléfono</label>
+                        <input type="number" name="provider_phone" autocomplete="off" id="">
+                        <label for="provider_email">Email de contacto</label>
+                        <input type="email" name="provider_email" id="" autocomplete="off">
+                        <label for="provider_contactName">Nombre de contacto</label>
+                        <input type="number" name="provider_contactName" autocomplete="off" id="">
+
+                        <h4>Dirección</h4>
+
+                        <label for="provider_street">Calle</label>
+                        <input type="text" name="provider_street" id="" autocomplete="off">
+                        <label for="provider_streetNumber">Número Exterior</label>
+                        <input type="number" name="provider_streetNumber" id="" autocomplete="off">
+                        <label for="provider_internalNumber">Número interior</label>
+                        <input type="number" name="provider_internalNumber" id="" autocomplete="off">
+                        <label for="provider_postalCode">Código Postal</label>
+                        <input type="number" name="provider_postalCode" autocomplete="off" id="">
+                        <label for="provider_suburb">Colonia</label>
+                        <input type="text" name="provider_suburb" autocomplete="off" id="">
+                        <label for="provider_city">Ciudad</label>
+                        <input type="text" name="provider_city" autocomplete="off" id="">
+                        <label for="provider_state">Estado</label>
+                        <input type="text" name="provider_state" autocomplete="off" id="">
+                        <label for="provider_municipality">Municipio</label>
+                        <input type="text" name="provider_municipality" autocomplete="off" id="">
+                        <label for="provider_country">País</label>
+                        <input type="text" name="provider_country" autocomplete="off" id="">
+
+                        <h4>Información de Facturación</h4>
+
+                        
+                        <label for="provider_rfc">RFC</label>
+                        <input type="text" name="provider_rfc" id="" autocomplete="off">
+                        <label for="provider_bank">Banco</label>
+                        <input type="text" name="provider_bank" id="" autocomplete="off">
+                        <label for="provider_clabe">Clabe</label>
+                        <input type="text" name="provider_clabe" id="" autocomplete="off">
+                        <label for="provider_bankAccount">Numero de Cuenta</label>
+                        <input type="text" name="provider_bankAccount" id="" autocomplete="off">
+
+
+                    </div>
+
+                    <div class="provider-btn">
+                        <button type="submit">Agregar Proveedor</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+
+
+
+    </div>
+
+    <div class="container-dinamic-2" id="container1">
+        <div class="quote-search">
+
+            <input type="search" name="quote-search" id="" placeholder="Buscar compañia..."
+            autocomplete="off">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="company-container">
+            <table class="company-table">
+                <thead class="company-tableh">
+                    <th>ID</th>
+                    <th>Razón Social</th>
+                    <th>Nombre de Contacto</th>
+                    <th>Teléfono de Contacto</th>
+                    <th>Correo de contacto</th>
+                    <th>Tipo de Persona</th>
+                    <th>Forma de pago</th>
+                </thead>
+    
+                <tbody class="company-tableb">
+                    <td>1</td>
+                    <td>OrangeSports</td>
+                    <td>Juan Alberto Castro</td>
+                    <td>55 0000 0000</td>
+                    <td>jcastro@dominio.mx</td>
+                    <td>Persona Moral</td>
+                    <td>Transferencía Bancaria (SANTANDER)</td>
+                </tbody>
+    
+                <tbody class="company-tableb">
+                    <td>1</td>
+                    <td>Yamaha</td>
+                    <td>Romina Flores</td>
+                    <td>55 0000 0000</td>
+                    <td>rflores@dominio.mx</td>
+                    <td>Sociedad Anonima</td>
+                    <td>Transferencía Bancaria (BANCOMER)</td>
+                </tbody>
+    
+                <tbody class="company-tableb">
+                    <td>1</td>
+                    <td>OrangeSports</td>
+                    <td>Juan Alberto Castro</td>
+                    <td>55 0000 0000</td>
+                    <td>jcastro@dominio.mx</td>
+                    <td>Persona Moral</td>
+                    <td>Efectivo</td>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+
+    <div class="container-dinamic-3" id="container1">
+        <div class="quote-search">
+
+            <input type="search" name="quote-search" id="" placeholder="Buscar compañia..."
+            autocomplete="off">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="company-container">
+            <table class="company-table">
+                <thead class="company-tableh">
+                    <th>Contacto</th>
+                    <th>Actividad</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                    <th>Responsable</th>
+                </thead>
+
+                <tbody class="company-tableb">
+                    <td>Ruben Ortega</td>
+                    <td>Vicepresidente</td>
+                    <td>55 0000 0000</td>
+                    <td>rortega@dominio.mx</td>
+                    <td>Fernanda Pilar Perez aguilar</td>
+                </tbody>
+            </table>
+            
+        </div>
+        <button class="bill-new" id="btnModal2">Agregar Contacto</button>
+    </div>
+
+    <section class="modal2" id="modalContainer2">
+        <div class="bill-modal-content">
+            <span class="close2">X</span>
+            <h2>Nuevo Contacto</h2>
+
+            <form action="" class="vehicle-form part-form">
+                <div class="group">
+                    <label for="part_id">Nombre y Apellido</label>
+                    <input type="text" name="part_id" placeholder="Código de la refacción" autocomplete="off">
+                    <label for="part_name">Fecha de cumpleaños</label>
+                    <input type="text" name="part_name" placeholder="Cliente, Proveedor..."
+                        autocomplete="off">
+                    <label for="part_description">Cargo</label>
+                    <input type="text" name="part_description"
+                        placeholder="Tecnología de la Información, Taller Mecanico..." autocomplete="off">
+                    <label for="part_brand">Teléfono</label>
+                    <input type="number" name="part_brand" placeholder="Teléfono de la Compañía (10 digitos)" autocomplete="off">
+                    <label for="part_stock">Email</label>
+                    <input type="email" name="part_stock" placeholder="Email de la compañía" autocomplete="off">
+                    <label for="part_weight">Sitio Web</label>
+                    <input type="number" name="part_weight" placeholder="www.compañia.mx" autocomplete="off">
+                    <label for="part_price">Compañia</label>
+                    <select name="part_price" id="">
+                        <option value="">Compañia1</option>
+                        <option value="">Compañia1</option>
+                        <option value="">Compañia1</option>
+                        <option value="">Compañia1</option>
+                    </select>
+                    <label for="direction">Dirección</label>
+                    <input type="text" name="direction" autocomplete="off" placeholder="Dirección Completa" id="">
+                    <label for="employer_response">Tipo de contacto</label>
+                    <select name="employer_response" id="">
+                        <option value="">Cliente</option>
+                        <option value="">Proveedor</option>
+                    </select>
+                    <label for="direction">Descripción</label>
+                    <input type="text" name="direction" autocomplete="off" placeholder="Dirección Completa" id="">
+
+                    <div class="part-btn">
+                        <button type="submit">Agregar compañia</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <p class="text-footer">Todos los derechos reservados &copy; Iteration Servicios y Soluciones SAS de CV.</p>
+    </footer>
+
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

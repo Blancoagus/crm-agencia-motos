@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Concesionaria</title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- BOOTSTRAP -->
+
+    <!-- FONT AWESOME -->
+
+    <script src="https://kit.fontawesome.com/712520a43b.js" crossorigin="anonymous"></script>
+
+    <!-- ROBOTO FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="vehicle-body">
+<!-- HEADER CON LOGO - TITULO - MENU NAVEGACION -->
+<header class="header">
+
+        <div class="logo">
+            <img src="./assets/img/logo-iteration.png" alt="" class="img-responsive mt-4">
+        </div>
+ 
+
+   
+        <div class="title-header">
+            <h1>Gestión de concesionaria</h1>
+        </div>
+  
+
+        <nav class="nav">
+                <ul class="menu">
+                    <a href="index.html" class="menu-link"><li>Inicio</li></a>
+                    <a href="" class="menu-link"><li>Configuración</li></a>
+                    <a href="" class="menu-link"><li>Salir</li></a>
+                </ul>
+        </nav>
+ 
+</header>   
+
+
+  
+
+<!-- FIN HEADER -->
+
+
+    <!-- MAIN -->
+
+    <main class="vehicle-main">
+        <div class="vehicle-options">
+            <button class="vehicle-add" id="btnModal" onclick="modal();"><i class="fas fa-plus"></i>Agregar Vehículo</button>
+            <div class="search-options">
+                <input class="vehicle-search" type="search" name="search" id="" placeholder="Buscar" autocomplete="off">
+                <label for="search"><a href=""><i class="fas fa-search"></i></a></label>
+            </div>
+        </div>
+        <table class="vehicle-table">
+            <thead>
+                <th>ID del Producto</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Color</th>
+                <th>Cantidad</th>
+                <th>Precio sin IVA</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
+            </thead>
+            <tr>
+            <tbody>
+                <td>1</td>
+                <td>Yamaha</td>
+                <td>2011</td>
+                <td>Rojo</td>
+                <td>1</td>
+                <td>$16,000.00s</td>
+                <td><a href="#"><i class="modify fas fa-pencil-alt"></i></a></td>
+                <td><a href="#"><i class="delete fas fa-trash-alt"></i></a></td>
+            </tbody>
+            </tr>
+
+        </table>
+
+        <!-- MODAL DE NUEVO VEHÍCULO -->
+        <div class="vehicle-modal" id="modal">
+            <div class="modal-content">
+                <span class="close">X</span>
+                <h2>Agregar un vehículo</h2>
+                <form action="" method="post" class="vehicle-form">
+                    <div class="group">
+                        <label for="vehicle_name">Nombre</label>
+                        <input type="text" name="vehicle_name" id="" autocomplete="off" required placeholder="Moto Deportiva Yamaha...">
+                        <label for="vehicle_brand">Marca</label>
+                        <input type="text" name="vehicle_brand" id="" autocomplete="off" required placeholder="Yamaha, Ducati...">
+                        <label for="vehicle_model">Modelo</label>
+                        <input type="text" name="vehicle_model" id="" autocomplete="off" required placeholder="R15, 2020...">
+                        <label for="vehicle_type">Tipo</label>
+                        <input type="text" name="vehicle_type" id="" autocomplete="off" required placeholder="Scooter, Motocross, Deportiva...">
+                        <label for="vehicle_year">Año</label>
+                        <input type="text" name="vehicle_year" id="" autocomplete="off" required placeholder="2020, 2019...">
+                        <label for="vehicle_displacement">Cilindradas</label>
+                        <input type="text" name="vehicle_displacement" id="" autocomplete="off" required placeholder="125cc, 250cc">
+                        <label for="vehicle_motor">Motor</label>
+                        <input type="text" name="vehicle_motor" id="" autocomplete="off" placeholder="Monocilíndrico, Bicilíndrico...">
+                        <label for="vehicle_motorBrand">Marca del motor</label>
+                        <input type="text" name="vehicle_motorBrand" id="" autocomplete="off" placeholder="Yamaha, Honda...">
+                    </div>
+
+                    <div class="group">
+                        <label for="vehicle_color">Color</label>
+                        <input type="text" name="vehicle_color" id="" autocomplete="off" required placeholder="Rojo y Blanco, Verde...">
+                        <div class="vehicle-use">
+                            <label>
+                            <input type="radio" name="vehicle_use" id="vehicle_used" value="vehicle_used">
+                            Usado</label>
+                            <label>
+                            <input type="radio" name="vehicle_use" id="vehicle_new" value="vehicle_new">
+                            Nuevo</label>
+
+                        </div>
+                        <label for="vehicle_km">Kilometraje</label>
+                        <input type="number" name="vehicle_km" id="" autocomplete="off" placeholder="50.000, 100.000 ....">
+
+                        
+                       
+                    </div>
+
+                    <div class="group">
+                        <label for="vehicle_stock">STOCK</label>
+                        <input type="number" name="vehicle_stock" id="" autocomplete="off" required placeholder="10, 50, 100...">
+                        <label for="vehicle_price">Precio</label>
+                        <input type="number" name="vehicle_price" id="" autocomplete="off" required placeholder="15.000, 20.000">
+                    </div>
+
+                    <div class="group">
+                        <label for="vehicle_discount">Descuento %</label>
+                        <input type="number" name="vehicle_discount" id="" autocomplete="off" placeholder="10, 20, 30...">
+                        <div class="discount">
+                            <a class="vehicle-discountP">Programar descuentos</a> <br>
+                            <span class="">Desde <strong>24/12/2020</strong>  hasta <strong>01/01/2020</strong> </span>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <h3 class="group-title">Foto</h3>
+                        <div class="photo">
+                            <img src="./assets/img/sin-foto.jpg" alt="Sin foto">
+                        </div>
+                        <div class="input-photo">
+                            <input class="vehicle-photo-input" type="file" name="vehicle_photo" id="">
+                        </div>
+                    </div>
+                    
+                    <div class="submit">
+
+                        <input type="submit" value="Agregar Vehículo">
+                    </div>
+                </form>
+            </div>
+        </div>
+       
+    </main>
+
+    <footer class="footer">
+            <p class="text-footer">Todos los derechos reservados &copy; Iteration Servicios y Soluciones SAS de CV.</p>
+    </footer>
+
+
+<script src="./assets/js/modals.js"></script>
+</body>
+</html>

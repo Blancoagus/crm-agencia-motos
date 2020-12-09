@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Concesionaria</title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- BOOTSTRAP -->
+
+    <!-- FONT AWESOME -->
+
+    <script src="https://kit.fontawesome.com/712520a43b.js" crossorigin="anonymous"></script>
+
+    <!-- ROBOTO FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="sells-body">
+<!-- HEADER CON LOGO - TITULO - MENU NAVEGACION -->
+<header class="header">
+
+        <div class="logo">
+            <img src="./assets/img/logo-iteration.png" alt="" class="img-responsive mt-4">
+        </div>
+ 
+
+   
+        <div class="title-header">
+            <h1>Gestión de concesionaria</h1>
+        </div>
+  
+
+        <nav class="nav">
+                <ul class="menu">
+                    <a href="index.html" class="menu-link"><li>Inicio</li></a>
+                    <a href="" class="menu-link"><li>Configuración</li></a>
+                    <a href="" class="menu-link"><li>Salir</li></a>
+                </ul>
+        </nav>
+ 
+</header>   
+
+
+  
+
+<!-- FIN HEADER -->
+
+
+    <!-- MAIN -->
+
+    <main class="sells-main">
+
+        <div class="parts-nav-container">
+            <nav class="parts-nav">
+                <ul class="parts-menu" id="dinamicMenu">
+                    <li id="containerDinamic1" class="dinamic-item active">Repuestos</li>
+                    <li id="containerDinamic2" class="dinamic-item">Ventas</li>
+                    <li id="containerDinamic3" class="dinamic-item">Stock</li>
+                </ul>
+            </nav>
+        </div>
+
+        
+    </main>
+
+<div id="containerDinamic1" class="parts-info-container container-dinamic-1">
+    <div class="sells-bill-info">
+        <form action="" class="sells-bill-search">
+            <div class="group">
+                <label for="provider">Proveedor</label>
+                <input type="text" name="provider" id="" placeholder="Razon Social, RFC...">
+                <label for="part_brand">Marca del Repuesto</label>
+                <input type="text" name="part_brand" id="" autocomplete="off" placeholder="Yamaha, Italika...">
+                <label for="part_type">Tipo de repuesto</label>
+                <input type="text" name="part_type" id="" autocomplete="off" placeholder="Amortiguador, Frenos...">
+            </div>
+
+            <input type="submit" value="Buscar">
+            <button class="bill-new" id="btnModal">Agregar Repuesto</button>
+        </form>
+    </div>
+
+    <section class="modal" id="modalContainer1">
+        <div class="modal-content">
+            <span id="closeModal" class="close">X</span>
+            <h2>Nuevo Repuesto</h2>
+
+
+            <form action="" class="vehicle-form part-form">
+                <div class="group">
+                    <label for="part_id">Código</label>
+                    <input type="number" name="part_id" placeholder="Código de la refacción" autocomplete="off">
+                    <label for="part_name">Nombre</label>
+                    <input type="text" name="part_name" placeholder="Inmovilizador, Amortiguador..." autocomplete="off">
+                    <label for="part_description">Descripción</label>
+                    <input type="text" name="part_description" placeholder="Inmovilizador de Volante, Amortiguador para Yamaha..." autocomplete="off">
+                    <label for="part_brand">Marca</label>
+                    <input type="text" name="part_brand" placeholder="Yamaha, Italika, Honda..." autocomplete="off">
+                    <label for="part_provider">Proveedor</label>
+                    <select name="part_provider" id="">
+                        <option value="default" checked>Elige un proveedor</option>
+                        <option value="default" checked>Yamaha</option>
+                        <option value="default" checked>OrangeSport</option>
+                        <option value="default" checked>Taller</option>
+                    </select>
+                    <i class="fa fa-plus add-provider" id="addProvider"></i>
+                    <div class="group-provider">
+                        <span class="close-provider">X</span>
+                        <h4>AGREGAR NUEVO PROVEEDOR</h4>
+
+                        <label for="provider_id">ID</label>
+                        <input type="number" name="provider_id" id="" autocomplete="off">
+
+                        <label for="provider_name">Nombre</label>
+                        <input type="number" name="provider_name" id="" autocomplete="off" placeholder="">
+                        
+                        <label for="provider_legalType">Tipo de persona:</label>
+                        <select name="provider_legalType" id="">
+                            <option value="personaFisica">Persona Fisica</option>
+                            <option value="personaMoral">Persona Moral</option>
+                            <option value="SA">Sociedad Anonima</option>
+                            <option value="SC">Sociedad Cooperativa</option>
+                            <option value="SAS">Sociedad por Acciones Simplificada</option>
+                            <option value="SNC">Sociedad en Nombre Colectivo</option>
+                            <option value="SCS">Sociedad en Comandita Simple</option>
+                            <option value="SRL">Sociedad de Responsabilidad Limitada</option>
+                            <option value="SCA">Sociedad en Comandita por Acciones</option>
+                        </select>
+
+                        <h4>Contacto</h4>
+
+                        <label for="provider_phone">Teléfono</label>
+                        <input type="number" name="provider_phone" autocomplete="off" id="">
+                        <label for="provider_email">Email de contacto</label>
+                        <input type="email" name="provider_email" id="" autocomplete="off">
+                        <label for="provider_contactName">Nombre de contacto</label>
+                        <input type="number" name="provider_contactName" autocomplete="off" id="">
+
+                        <h4>Dirección</h4>
+
+                        <label for="provider_street">Calle</label>
+                        <input type="text" name="provider_street" id="" autocomplete="off">
+                        <label for="provider_streetNumber">Número Exterior</label>
+                        <input type="number" name="provider_streetNumber" id="" autocomplete="off">
+                        <label for="provider_internalNumber">Número interior</label>
+                        <input type="number" name="provider_internalNumber" id="" autocomplete="off">
+                        <label for="provider_postalCode">Código Postal</label>
+                        <input type="number" name="provider_postalCode" autocomplete="off" id="">
+                        <label for="provider_suburb">Colonia</label>
+                        <input type="text" name="provider_suburb" autocomplete="off" id="">
+                        <label for="provider_city">Ciudad</label>
+                        <input type="text" name="provider_city" autocomplete="off" id="">
+                        <label for="provider_state">Estado</label>
+                        <input type="text" name="provider_state" autocomplete="off" id="">
+                        <label for="provider_municipality">Municipio</label>
+                        <input type="text" name="provider_municipality" autocomplete="off" id="">
+                        <label for="provider_country">País</label>
+                        <input type="text" name="provider_country" autocomplete="off" id="">
+
+                        <h4>Información de Facturación</h4>
+
+                        
+                        <label for="provider_rfc">RFC</label>
+                        <input type="text" name="provider_rfc" id="" autocomplete="off">
+                        <label for="provider_bank">Banco</label>
+                        <input type="text" name="provider_bank" id="" autocomplete="off">
+                        <label for="provider_clabe">Clabe</label>
+                        <input type="text" name="provider_clabe" id="" autocomplete="off">
+                        <label for="provider_bankAccount">Numero de Cuenta</label>
+                        <input type="text" name="provider_bankAccount" id="" autocomplete="off">
+
+                        <div class="submit-btn">
+                            <input type="submit" value="Agregar Proveedor">
+                        </div>
+
+
+                    </div>
+                    <label for="part_stock">Stock</label>
+                    <input type="number" name="part_stock" placeholder="0, 5, 10..." autocomplete="off">
+                    <label for="part_weight">Peso</label>
+                    <input type="number" name="part_weight" placeholder="10kg, 20kg..." autocomplete="off">
+                    <label for="part_price">Precio sin IVA</label>
+                    <input type="number" name="part_price" placeholder="1,500.00 - 100.00" autocomplete="off">
+
+                    <div class="part-btn">
+                        <button type="submit">Agregar Refacción</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+
+
+
+</div>
+
+<div id="containerDinamic2" class="parts-sells-containter container-dinamic-2">
+    <h3>Ventas</h3>
+
+    <div class="quote-search">
+        
+        <input type="search" name="quote-search" id="" placeholder="Buscar por cliente o repuesto" autocomplete="off">
+        <i class="fas fa-search"></i>
+    </div>
+
+    <div class="quote-table-container">
+        <table class="quote-table">
+            <thead>
+                <th>Fecha</th>
+                <th>N° Factura</th>
+                <th>Cliente</th>
+                <th>Descripción de productos</th>
+                <th>Persona encargada</th>
+                <th>Monto</th>
+                <th>Estatus</th>
+            </thead>
+
+            <tbody>
+                <td>01/05/2020</td>
+                <td>00123</td>
+                <td>Iteration Servicios y Soluciones TI</td>
+                <td>Amortiguadores para R15, Inmovilizador de volante</td>
+                <td>Franco Ramos</td>
+                <td>$1,500.00</td>
+                <td class="payed"><i class="fas fa-circle"></i>Pagada</td>
+            </tbody>
+            
+            <tbody>
+                <td>01/05/2020</td>
+                <td>00123</td>
+                <td>Iteration Servicios y Soluciones TI</td>
+                <td>Amortiguadores para R15, Inmovilizador de volante</td>
+                <td>Franco Ramos</td>
+                <td>$1,500.00</td>
+                <td class="waiting"><i class="fas fa-circle"></i>Pendiente de pago</td>
+            </tbody>
+            
+            <tbody>
+                <td>01/05/2020</td>
+                <td>00123</td>
+                <td>Iteration Servicios y Soluciones TI</td>
+                <td>Amortiguadores para R15, Inmovilizador de volante</td>
+                <td>Franco Ramos</td>
+                <td>$1,500.00</td>
+                <td class="payment-need"><i class="fas fa-circle"></i>Falta pago</td>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+<div id="containerDinamic3" class="parts-stock-containter container-dinamic-3">
+    <h3>STOCK</h3>
+    <div class="quote-info-options">
+        <label>
+            Todos
+            <input type="radio" name="billStatus" id="" value="all" checked>
+        </label>
+        <label>
+            Por quedarse sin stock
+            <input type="radio" name="billStatus" id="" value="out-of-stock">
+        </label>
+    </div>
+
+    <div class="quote-search">
+        
+        <input type="search" name="quote-search" id="" placeholder="Buscar por: Proveedor, Código, Marca o Código" autocomplete="off">
+        <i class="fas fa-search"></i>
+    </div>
+
+    <div class="quote-table-container">
+        <table class="quote-table">
+            <thead>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Marca</th>
+                <th>Proveedor</th>
+                <th>Precio Unitario</th>
+                <th>Stock</th>
+            </thead>
+
+            <tbody>
+                <td>HOAM-01200-12</td>
+                <td>Amortiguador</td>
+                <td>Amortiguador Honda CBR</td>
+                <td>Honda</td>
+                <td>OrangeSports</td>
+                <td>$2,580.00</td>
+                <td class="out-of-stock">3</td>
+            </tbody>
+            
+            <tbody>
+                <td>YAFA-29219-02</td>
+                <td>Filtro de Aire</td>
+                <td>Filtro de Aire para Yamaha FZ6RE</td>
+                <td>Yamaha</td>
+                <td>Taller Yamaha CDMX</td>
+                <td>$1,350.00</td>
+                <td class="in-stock">15</td>    
+            </tbody>
+
+
+        </table>
+    </div>
+</div>
+
+<div class="modal"></div>
+
+
+
+    <footer class="footer">
+            <p class="text-footer">Todos los derechos reservados &copy; Iteration Servicios y Soluciones SAS de CV.</p>
+    </footer>
+
+
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
